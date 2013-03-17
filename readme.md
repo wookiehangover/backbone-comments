@@ -8,5 +8,6 @@ All dependencies are installed with
 [bower](http://twitter.github.com/bower).
 
     $ npm install -g bower
-
     $ bower install
+
+
