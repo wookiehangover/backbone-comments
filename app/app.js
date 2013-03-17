@@ -13,11 +13,13 @@ define(function(require, exports, module){
     initialize: function(){
       this.collection = new CommentsCollection();
       this.listenTo( this.collection, 'add', this.renderComment );
+      this.listenTo( this.collection, 'remove', this.renderCommentCount );
     },
 
     renderComment: function(model){
       model.view = new CommentView({ model: model });
-      this.$('#comment-list').append( model.view.render() );
+      var comment = model.view.render().hide();
+      this.$('#comment-list').prepend( comment.delay(200).slideDown() );
 
       this.resetFormFields();
       this.renderCommentCount();
