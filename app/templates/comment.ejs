@@ -1,4 +1,6 @@
 <header>
-  Posted by <span class="author-email"><a href=""><%= model.get('email') %></a></span> on <span class="date"><%= model.get('created_at') %></span>
+  Posted by <span class="author-email"><a href=""><%= model.get('email') %></a></span> <span class="date"><%= formatDate() %></span>
 </header>
-<p><%= model.escape('content') %></p>
+<div class="comment-content">
+  <%= renderMarkdown() %>
+</div>

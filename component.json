@@ -13,6 +13,8 @@
     "lodash": "~1.0.1",
     "backbone.localStorage": "~1.1.0",
     "modernizr": "~2.6.2",
-    "requirejs-tpl": "latest"
+    "requirejs-tpl": "latest",
+    "moment": "~2.0.0",
+    "markdown": "~0.4.0"
   }
 }

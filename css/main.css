@@ -110,7 +110,6 @@ article {
     margin-top: 0;
     font-family: Georgia, "Times New Roman", Times, serif;
     text-align: justify;
-
   }
 
 form {
@@ -135,7 +134,7 @@ form {
     padding: 0.5em;
     width: 98%;
     width: calc(100% - 1em);
-    height: 2em;
+    height: 4em;
   }
 
   .form-row button {
