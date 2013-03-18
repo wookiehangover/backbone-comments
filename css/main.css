@@ -100,6 +100,54 @@ textarea {
   margin: 0 auto;
 }
 
+
+
+
+.btn {
+  display: inline-block;
+  border: none;
+  padding: 6px 12px;
+  margin-bottom: 0;
+  text-decoration: none;
+  text-align: center;
+  vertical-align: middle;
+  cursor: pointer;
+  border: 1px solid #5bc0de;
+  background: #5bc0de;
+  color: #fff;
+  border-radius: 4px;
+  font-size: 14px;
+  line-height: 20px;
+  white-space: nowrap;
+}
+
+.btn.dark {
+  border-color: #a7a9aa;
+  background: #a7a9aa;
+}
+
+.btn&:hover,
+.btn&:focus {
+  color: #fff;
+  text-decoration: none;
+}
+
+.btn&:active,
+.btn&.active {
+  outline: 0;
+  background-image: none;
+  .box-shadow(inset 0 3px 5px rgba(0,0,0,.125));
+}
+
+.btn&.disabled,
+.btn&[disabled] {
+  cursor: default;
+  pointer-events: none; // Future-proof disabling of clicks
+  .opacity(.65);
+  .box-shadow(none);
+}
+
+
 article {
   -webkit-column-count: 2;  -webkit-column-gap: 30px;
      -moz-column-count: 2;     -moz-column-gap: 30px;
@@ -111,6 +159,9 @@ article {
     font-family: Georgia, "Times New Roman", Times, serif;
     text-align: justify;
   }
+
+
+
 
 form {
   width: 500px;
@@ -126,6 +177,12 @@ form {
   padding-bottom: 1em;
 }
 
+  .form-row .email {
+    display: none;
+    font-size: 0.8em;
+    font-style: italic;
+  }
+
   .form-row:last-of-type {
     padding: 0;
   }
@@ -139,7 +196,16 @@ form {
 
   .form-row button {
     float: right;
+    display: none;
   }
+
+  .form-row .sign-in {
+    float: right;
+  }
+
+
+
+
 
 #comment-list {
   list-style: none;
@@ -150,21 +216,25 @@ form {
   width: 540px;
 }
 
-  #comment-list li {
+  #comment-list > li {
     border-bottom: 1px solid #ccc;
     margin-bottom: 1em;
   }
 
-  #comment-list li header {
+  #comment-list > li header {
     font-size: 0.75em;
   }
 
-  #comment-list li header span {
+  #comment-list > li header span {
     font-style: italic;
   }
 
-  #comment-list li p {
+  #comment-list > li p {
     font-family: Georgia, "Times New Roman", Times, serif;
+  }
+
+  #comment-list > li img {
+    width: 100%;
   }
 
 
@@ -280,9 +350,36 @@ form {
    Modify as content requires.
    ========================================================================== */
 
-@media only screen and (min-width: 35em) {
-    /* Style adjustments for viewports that meet the condition */
+@media only screen and (max-width: 960px) {
+  .container {
+    padding: 0 2em;
+    width: 94%;
+    width: calc(100% - 4em);
+  }
 }
+
+@media only screen and (max-width: 640px) {
+
+}
+
+
+@media only screen and (max-width: 606px) {
+  article {
+    -webkit-column-count: 1;  -webkit-column-gap: 30px;
+       -moz-column-count: 1;     -moz-column-gap: 30px;
+            column-count: 1;          column-gap: 30px;
+  }
+
+  #comment-list {
+    width: 100%;
+  }
+
+  form {
+    width: 80%;
+    width: calc(100% - 40px);
+  }
+}
+
 
 @media print,
        (-o-min-device-pixel-ratio: 5/4),
