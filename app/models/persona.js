@@ -6,7 +6,7 @@ define(function(requre, exports, module){
 
   module.exports = Backbone.Model.extend({
 
-    url: 'http://localhost:3000/auth/login',
+    url: 'http://wookiehangover.com:9001/auth/login',
 
     initialize: function(){
       navigator.id.watch({
@@ -20,7 +20,7 @@ define(function(requre, exports, module){
       var model = this;
 
       $.ajax({
-        url: 'http://localhost:3000/auth/login',
+        url: this.url,
         type: 'post',
         data: {
           assertion: assertion
