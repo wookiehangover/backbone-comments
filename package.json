@@ -1,0 +1,26 @@
+{
+  "name": "backbone-comments",
+  "version": "0.0.0",
+  "description": "A small example app for demonstrating the basics of Backbone.js apps.",
+  "main": "index.js",
+  "dependencies": {
+    "grunt": "~0.4.1",
+    "grunt-contrib-cssmin": "~0.5.0",
+    "grunt-requirejs": "~0.3.3"
+  },
+  "devDependencies": {
+    "grunt-contrib-cssmin": "~0.5.0",
+    "grunt-requirejs": "~0.3.3"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/wookiehangover/backbone-comments.git"
+  },
+  "author": "",
+  "license": "BSD",
+  "readmeFilename": "readme.md",
+  "gitHead": "74402ef89c5e9924fa4cacd23c79f0a57a7a02be"
+}
