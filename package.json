@@ -4,13 +4,12 @@
   "description": "A small example app for demonstrating the basics of Backbone.js apps.",
   "main": "index.js",
   "dependencies": {
-    "grunt": "~0.4.1",
-    "grunt-contrib-cssmin": "~0.5.0",
-    "grunt-requirejs": "~0.3.3"
   },
   "devDependencies": {
+    "grunt": "~0.4.1",
     "grunt-contrib-cssmin": "~0.5.0",
-    "grunt-requirejs": "~0.3.3"
+    "grunt-requirejs": "~0.3.3",
+    "grunt-contrib-qunit": "~0.2.0"
   },
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
