@@ -48,9 +48,7 @@ define(function(require, exports, module){
       if( this.timer ){
         clearTimeout( this.timer );
       }
-      this.$el.slideUp(_.bind(function(){
-        Backbone.View.prototype.remove.call(this);
-      }, this));
+      this.$el.slideUp( _.bind(Backbone.View.prototype.remove, this) );
     }
 
   });
